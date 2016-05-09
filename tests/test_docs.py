@@ -98,5 +98,5 @@ this demonstrations jinja2's include statement
 def _verify_content(file_name, expected):
     with open(file_name, 'r') as f:
         content = f.read()
-        assert content == expected
+        assert content == expected, u'%s != %s' % (content, expected)
 
