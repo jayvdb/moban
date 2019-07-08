@@ -1,10 +1,10 @@
-requires:
-  - type: git
-    url: https://github.com/jayvdb/pypi-mobans
-    branch: 201907-fixes
+#requires:
+#  - type: git
+#    url: https://github.com/jayvdb/pypi-mobans
+#    branch: 201907-fixes
 configuration:
   template_dir:
-    - "pypi-mobans:templates"
+    - "../pypi-mobans/templates"
     - ".moban.d"
   configuration: moban.yml
 targets:
