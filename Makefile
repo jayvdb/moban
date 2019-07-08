@@ -14,7 +14,7 @@ test:
 	bash test.sh
 
 lint:
-	flake8 --max-line-length=88 --exclude=./.moban.d/setup.py,./docs/conf.py --ignore=W503,W504
+	bash lint.sh
 
 format:
 	isort -y $(find moban -name "*.py"|xargs echo) $(find tests -name "*.py"|xargs echo)
