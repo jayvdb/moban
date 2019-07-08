@@ -12,7 +12,7 @@ python:
   - 3.5
   - 3.4
   - 2.7
-matrix:
+jobs:
   include:
     - python: 2.7
       env: MINREQ=1
