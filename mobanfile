@@ -1,8 +1,10 @@
 requires:
-   - pypi-mobans-pkg
+  - type: git
+    url: https://github.com/jayvdb/pypi-mobans
+    branch: 201907-fixes
 configuration:
   template_dir:
-    - "setupmobans:templates"
+    - "pypi-mobans:templates"
     - ".moban.d"
   configuration: moban.yml
 targets:

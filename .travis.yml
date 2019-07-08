@@ -10,11 +10,11 @@ python:
   - 3.7
   - 3.6
   - 3.5
+  - 3.4
   - 2.7
-matrix:
-  include:
-    - python: 2.7
-      env: MINREQ=1
+env:
+  - MINREQ=0
+  - MINREQ=1
 
 stages:
   - test

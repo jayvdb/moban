@@ -67,7 +67,6 @@ CLASSIFIERS = [
 ]
 
 INSTALL_REQUIRES = [
-    "ruamel.yaml>=0.15.5",
     "jinja2>=2.7.1",
     "lml>=0.0.9",
     "appdirs>=1.2.0",
@@ -77,6 +76,14 @@ INSTALL_REQUIRES = [
 ]
 SETUP_COMMANDS = {}
 
+if sys.version[:3] == "3.4":
+    INSTALL_REQUIRES.append('ruamel.yaml>=0.15.5,<=0.15.94')
+if sys.version[:3] == "3.7":
+    INSTALL_REQUIRES.append('ruamel.yaml>=0.15.42')
+if sys.version[:3] == "3.8":
+    INSTALL_REQUIRES.append('ruamel.yaml>=0.15.97')
+if sys.version[:3] != "3.4" and sys.version[:3] < "3.7":
+    INSTALL_REQUIRES.append('ruamel.yaml>=0.15.5')
 
 PACKAGES = find_packages(exclude=["ez_setup", "examples", "tests"])
 EXTRAS_REQUIRE = {
