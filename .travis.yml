@@ -12,12 +12,6 @@ python:
   - 3.5
   - 3.4
   - 2.7
-jobs:
-  include:
-    - python: 2.7
-      env: MINREQ=1
-    - python: 3.7
-      env: MINREQ=1
 
 stages:
   - test
@@ -39,6 +33,10 @@ stages:
 
 jobs:
   include:
+    - python: 2.7
+      env: MINREQ=1
+    - python: 3.7
+      env: MINREQ=1
     - *lint
 
 stage: test
