@@ -78,7 +78,6 @@ def abspath(path):
 
 
 def to_unicode(path):
-    if PY2:
-        if isinstance(path, unicode) is False:
-            return unicode(path)
+    if PY2 and path.__class__.__name__ != "unicode":
+        return u''.__class__(path)
     return path
